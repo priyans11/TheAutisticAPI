@@ -17,11 +17,10 @@
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
-- [List dependencies, e.g., Python 3.10, Node.js, etc.]
-- [How to install dependencies]
+- [dependencies:  Python 3.10,,React.js,tailwindCSS, Node.js,Express.js etc.]
 
-### Running the Project
-```bash
+### Running the Project:
+- [Clone the repo > open the repo in terminal >go to the backend folder of AISOC repo through terminal > npm i > run cmd :node server.js>open another terminal >go to the uniapi folder of AISOC repo through terminal> npm i > run cmd : npm run dev ]
 # Example commands
 git clone https://github.com/TheAutisticAPI/TheAutisticAPI.git
 cd TheAutisticAPI
@@ -48,7 +47,7 @@ cd TheAutisticAPI
 ---
 
 ## 🎯 Expected Outcomes & Deliverables
-- [Describe what you aim to deliver by the end of the project]
+- [Functional API for 2-3 DIC projects, external-ready docs, replicable integration template, and stronger DIC visibility in academia and industry]
 
 ---
 
