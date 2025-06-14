@@ -1,17 +1,16 @@
 # TheAutisticAPI
 
 ## 🧑‍💻 Team Information
-- **Team Name:** [Your Official Team Name]
+- **Team Name:** [TheAutisticAPI]
 - **Members:**
-  - [Full Name] - [Email]
-  - [Full Name] - [Email]
-  - [Add more as needed]
+  - [Raghav Gupta] - [raghavgupta56@gmail.com]
+  - [Priyanshu Anand] - [priyanshu82711@gmail.com]
+  - [Working on the Unified API system for DIC]
 
 ---
 
 ## 📝 Problem Statement
-[Paste your assigned problem statement here. Example:]
-> Project X: [Copy the relevant project description from the guidelines]
+> Project 8:[A backend framework that wraps existing project features into reusable, documented APIs to simplify integration and deployment.]
 
 ---
 
@@ -24,7 +23,7 @@
 ### Running the Project
 ```bash
 # Example commands
-git clone https://github.com/[your-team]/TheAutisticAPI.git
+git clone https://github.com/TheAutisticAPI/TheAutisticAPI.git
 cd TheAutisticAPI
 [installation steps]
 [run command]
@@ -59,7 +58,7 @@ All project-related discussions, updates, and queries should be conducted in the
 ---
 
 ## 📹 Demo Submission
-- [Instructions or link to your working demo (to be added before final submission)]
+- https://github.com/priyans11/AISOC.git
 
 ---
 
