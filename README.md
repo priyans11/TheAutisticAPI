@@ -98,7 +98,7 @@ All project-related discussions, updates, and queries should be conducted in the
 ---
 
 ## 🖥️ Presentation
-- [Project Documents](/proposal/Proposal_API Creation for DIC Projects (1))
+- [Project Documents](path/to/proposal/Proposal_API Creation for DIC Projects (1))
 ---
 
 ## 📄 Additional Notes
