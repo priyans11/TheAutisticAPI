@@ -98,7 +98,7 @@ All project-related discussions, updates, and queries should be conducted in the
 ---
 
 ## 🖥️ Presentation
-- [Project Documents](path/to/proposal/Proposal_API Creation for DIC Projects (1))
+- [Project Documents](https://docs.google.com/document/d/1lo1IsKXt4I15qSgKa7k05m57D8QJVngeGcddWml4TCE/edit?usp=drivesdk)
 ---
 
 ## 📄 Additional Notes
