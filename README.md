@@ -21,7 +21,7 @@
 ---
 
 ## 📝 Problem Statement
-> **Project 8** : A backend framework that wraps existing project features into reusable, documented APIs to simplify integration and deployment.
+**Project 8 :**  _A backend framework that wraps existing project features into reusable, documented APIs to simplify integration and deployment._
 
 ---
 
