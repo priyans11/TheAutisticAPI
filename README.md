@@ -1,112 +1,135 @@
-# TheAutisticAPI
+# AISOC 2025: TheAutisticAPI
 
-## 🧑‍💻 Team Information
+## Team Information
   **Team Name:** TheAutisticAPI
 
- |**Team Members:** |**E-mail** |
+ |**Team Members** |**E-mail** |
  |:---:|:--:|
- |Raghav Gupta|[raghavgupta56@gmail.com](raghavgupta56@gmail.com)|
+ |Raghav Gupta|[raghavrgupta56@gmail.com](raghavrgupta56@gmail.com)|
  |Priyanshu Anand|[priyanshu82711@gmail.com](priyanshu82711@gmail.com)|
 
+Working on developing the Unified API system for DIC
 
 
+## Problem Statement
+**Project 8 :**  _A backend framework that wraps existing project features into reusable, documented APIs to simplify integration and deployment._  
+
+Design Innovation Center (DIC) has developed(and continues to do so) numerous high-value, innovative student and research projects, yet these solutions remain significantly underutilized due to accessibility barriers and lack of standardized interfaces. Current projects exist as isolated systems without unified (or any known, used) access methods, limiting their potential for broader academic and industry adoption.
 
 
+## Quick Start Guide for Running the Project
 
-
-
-
-  - [Working on the Unified API system for DIC]
-
----
-
-## 📝 Problem Statement
-**Project 8 :**  _A backend framework that wraps existing project features into reusable, documented APIs to simplify integration and deployment._
-
----
-
-## 🚀 Quick Start Guide
+***will be modified as the project progresses**
 
 ### Prerequisites
-- **Dependencies :**  Python , React.js , tailwindCSS , Node.js , Express.js etc.
+Before running the project, ensure you have the following installed:
+- **Python** (3.8 or higher)
+- **Node.js** (16.x or higher)
+- **npm** (comes with Node.js)
+- **Git**
 
----
-## For Running the Project:
-### **1.** Clone the repo on you destop
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/TheAutisticAPI/TheAutisticAPI.git
+cd TheAutisticAPI
 ```
 
+### 2. Install Dependencies
 
+#### Python Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-#### **2.** Backend Setup
-* Go to the backend folder & open it in the terminal
-* Follow the command
-  ```js
-  cd backend //path to the backend folder 
-  npm i //to install node package modules
-  nodemon server.js //to run the server
+#### Node.js Dependencies
+```bash
+npm install
+```
 
-  //backend will run on localhost:5000
-#### **3.** Frontend Setup(in another terminal)
-* Go to the Frontend folder & open it in the terminal
-* Follow the command
-  ```js
-  cd UNIAPI //path to the frontend folder 
-  npm i //to install node package modules
-  npm run dev //to run the frontend
-  
-  //frontend will run on localhost:5174
-  ```
+### 3. Backend Setup
+Open a terminal and navigate to the backend directory:
+```bash
+cd backend
+npm install
+npm start
+# or use nodemon for development
+nodemon server.js
+```
+The backend server will run on `http://localhost:5000`
 
+### 4. Frontend Setup
+Open a **new terminal** and navigate to the frontend directory:
+```bash
+cd UNIAPI
+npm install
+npm run dev
+```
+The frontend will run on `http://localhost:5174`
 
-***
+### 5. Verify Installation
+- Backend: Visit `http://localhost:5000` to ensure the API is running
+- Frontend: Visit `http://localhost:5174` to access the web interface
 
-# Example commands
+### Troubleshooting
+- If you encounter port conflicts, check if the ports 5000 and 5174 are already in use
+- Ensure all dependencies are properly installed before running the servers
+- Check the console output for any error messages
+
+## Example commands
 
 ### Example Usage
-- [Provide example commands or screenshots showing how to use your project]
 
----
+- [To be Added later] <!-- TODO -->
 
 ## 📂 Project Structure
-- `/src` - Source code
-- `/docs` - Documentation
-- `/tests` - Test cases
-- [Add or modify as needed]
 
----
+```
+TheAutisticAPI/
+├── backend/                    # Backend API server
+├── UNIAPI/                    # Frontend application
+│   ├── src/                   # Frontend source code
+│   └── public/               # Static assets
+├── docs/                     # Documentation files
+├── tests/                    # Test cases
+└── README.md               # This file
+```
 
-## 🛠️ Milestones & Timeline
-- [List your planned milestones and expected completion dates]
+**Key Components:**
+- `backend/` - Node.js/Express API server handling unified API endpoints
+- `UNIAPI/` - React frontend for API management and documentation interface
+- `docs/` - API documentation and project guides
+- `tests/` - Unit and integration tests for both frontend and backend
 
----
+[Structure will be added to or modified as the project evolves] <!-- TODO -->
 
-## 🎯 Expected Outcomes & Deliverables
+
+## Milestones & Timeline
+
+- [To be added via issue soon] <!-- TODO -->
+
+## Expected Outcomes & Deliverables
+
 - [Functional API for 2-3 DIC projects, external-ready docs, replicable integration template, and stronger DIC visibility in academia and industry]
+[Will be added soon] <!-- TODO -->
 
----
+## Issue Tracking & Collaboration
 
-## 📢 Issue Tracking & Collaboration
 All project-related discussions, updates, and queries should be conducted in the main issue thread created using the `aisoc-workspace` template.
-
----
+[Will be added soon] <!-- TODO -->
 
 ## 📹 Demo Submission
-- [Unified API for different DIC projects](https://github.com/priyans11/AISOC.git)
 
----
+To be added close to the final submission date. The demo will showcase the unified API functionality and how it integrates with existing DIC projects.
 
 ## 🖥️ Presentation
-- [Project Documents](https://docs.google.com/document/d/1lo1IsKXt4I15qSgKa7k05m57D8QJVngeGcddWml4TCE/edit?usp=drivesdk)
----
+
+To be added close to the final submission date. The presentation will highlight the key features and benefits of the unified API.
 
 ## 📄 Additional Notes
-- [Any other important information for evaluators or users]
 
----
+- [Unified API for different DIC projects](https://github.com/priyans11/AISOC.git)
+- [Project Documents](https://docs.google.com/document/d/1lo1IsKXt4I15qSgKa7k05m57D8QJVngeGcddWml4TCE/edit?usp=drivesdk)
+
 
 ## 📌 References
-- [List any references, datasets, or resources used]
-
----
+- [Will be added as the project evolves] <!-- TODO -->
