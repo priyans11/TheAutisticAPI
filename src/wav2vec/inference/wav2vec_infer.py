@@ -7,6 +7,7 @@ import requests
 
 MODEL_PATH = "models/wav2vec_EmoDB_30.pth"
 MODEL_URL = "https://github.com/Raghav-56/TheAutisticAPI/releases/download/v1.0/wav2vec_EmoDB_30.pth"
+BASE_CKPT = "facebook/wav2vec2-base-960h"
 
 if not os.path.exists(MODEL_PATH):
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
@@ -18,8 +19,44 @@ if not os.path.exists(MODEL_PATH):
                 f.write(chunk)
     print("Download complete.")
 
-model = Wav2Vec2ForSequenceClassification.from_pretrained(MODEL_PATH)
-processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
+# model = Wav2Vec2ForSequenceClassification.from_pretrained(MODEL_PATH)
+# processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
+
+state_dict = torch.load(MODEL_PATH, map_location="cpu")
+candidate_keys = [
+    "classifier.weight",
+    "projector.weight",
+    "score.weight",
+]
+num_labels = None
+for k in candidate_keys:
+    if k in state_dict:
+        num_labels = state_dict[k].shape[0]
+        break
+if num_labels is None:
+    raise ValueError(
+        "Could not infer num_labels automatically – please set it manually."
+    )
+print(f"Detected classifier with {num_labels} labels.")
+model = Wav2Vec2ForSequenceClassification.from_pretrained(
+    BASE_CKPT,
+    num_labels=num_labels,
+    ignore_mismatched_sizes=True,  # allows head shape to differ from base ckpt
+)
+model.load_state_dict(state_dict)
+model.eval()
+processor = Wav2Vec2Processor.from_pretrained(BASE_CKPT)
+
+
+id2label = {
+    0: "anger",
+    1: "boredom",
+    2: "disgust",
+    3: "fear",
+    4: "happiness",
+    5: "neutral",
+    6: "sadness",
+}
 
 
 def load_audio(file_path):
@@ -27,16 +64,28 @@ def load_audio(file_path):
     return audio
 
 
-def predict_emotion(audio):
-    inputs = processor(audio, sampling_rate=16000, return_tensors="pt", padding=True)
+def predict_emotion(wav_path: str) -> str:
+    audio, _ = librosa.load(wav_path, sr=16_000)
+    inputs = processor(
+        audio,
+        sampling_rate=16_000,
+        return_tensors="pt",
+        padding=True,
+    )
     with torch.no_grad():
         logits = model(inputs.input_values).logits
-    predicted_class = logits.argmax().item()
-    return predicted_class
+        pred = int(torch.argmax(logits, dim=-1))
+    return id2label.get(pred, str(pred))
 
 
 if __name__ == "__main__":
-    audio_file = "path/to/your/audio.wav"  # Replace with your audio file path
-    audio = load_audio(audio_file)
-    emotion = predict_emotion(audio)
-    print(f"Predicted Emotion: {emotion}")
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Emotion recognition with a Wav2Vec2 .pth checkpoint"
+    )
+    parser.add_argument("audio", help="Path to a WAV/FLAC/OGG file")
+    args = parser.parse_args()
+
+    emotion = predict_emotion(args.audio)
+    print(f"Predicted emotion: {emotion}")
