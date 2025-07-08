@@ -2,8 +2,6 @@ torch
 transformers
 librosa
 soundfile
-pandas
-numpy
-tqdm
-matplotlib
-seaborn
+
+fastapi
+uvicorn

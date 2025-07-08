@@ -2,8 +2,17 @@ torch
 transformers
 librosa
 soundfile
-pandas
-numpy
-tqdm
-matplotlib
-seaborn
+
+# pandas
+# numpy
+# tqdm
+# matplotlib
+# seaborn
+
+fastapi
+uvicorn
+
+# python-multipart
+# aiofiles
+
+# httpx
