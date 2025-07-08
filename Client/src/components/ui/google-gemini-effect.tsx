@@ -21,20 +21,18 @@ export const GoogleGeminiEffect = ({
   return (
     <div className={cn("sticky top-20", className)}>
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
-        {title || `Build with Aceternity UI`}
+        {title || `Bridging AI Innovation`}
       </p>
       <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description ||
-          `Scroll this component and see the bottom SVG come to life wow this
-        works!`}
+          `Your Gateway to AI Innovation - Connecting brilliant minds with powerful AI models through one unified platform`}
       </p>
-         <div className="w-full h-[890px] -top-20 md:-top-10 flex items-center justify-center absolute">
-        <button className="relative group font-medium text-white/90 hover:text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full text-sm sm:text-base md:text-lg lg:text-xl z-30 mt-20 sm:mt-24 md:mt-30 lg:mt-36 transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm">
-          <span className="relative z-10 flex items-center gap-1.5 sm:gap-2">
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400/80 rounded-full animate-pulse"></span>
-            <span className="tracking-wide">            TheAutisticApi
-</span>
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400/80 rounded-full animate-pulse"></span>
+         <div className="w-full h-[890px] -top-40 md:-top-32 flex items-center justify-center absolute">
+        <button className="relative group font-medium text-white/90 hover:text-white px-3 py-1.5 xs:px-4 xs:py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 rounded-full text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl z-30 mt-34 sm:mt-38 md:mt-42 lg:mt-32 transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+          <span className="relative z-10 flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3">
+            <span className="w-1 h-1 xs:w-1.5 xs:h-1.5 sm:w-2 sm:h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 bg-cyan-400/80 rounded-full animate-pulse"></span>
+            <span className="tracking-wide whitespace-nowrap">TheAutisticApi</span>
+            <span className="w-1 h-1 xs:w-1.5 xs:h-1.5 sm:w-2 sm:h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 bg-cyan-400/80 rounded-full animate-pulse"></span>
           </span>
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:via-purple-600/10 group-hover:to-cyan-600/10 transition-all duration-300"></div>
         </button>
@@ -44,7 +42,7 @@ export const GoogleGeminiEffect = ({
         height="890"
         viewBox="0 0 1440 890"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -top-20 md:-top-10 w-full"
+        className="absolute -top-40 md:-top-32 w-full"
       >
         <motion.path
           d="M0 663C145.5 663 191 666.265 269 647C326.5 630 339.5 621 397.5 566C439 531.5 455 529.5 490 523C509.664 519.348 521 503.736 538 504.236C553.591 504.236 562.429 514.739 584.66 522.749C592.042 525.408 600.2 526.237 607.356 523.019C624.755 515.195 641.446 496.324 657 496.735C673.408 496.735 693.545 519.572 712.903 526.769C718.727 528.934 725.184 528.395 730.902 525.965C751.726 517.115 764.085 497.106 782 496.735C794.831 496.47 804.103 508.859 822.469 518.515C835.13 525.171 850.214 526.815 862.827 520.069C875.952 513.049 889.748 502.706 903.5 503.736C922.677 505.171 935.293 510.562 945.817 515.673C954.234 519.76 963.095 522.792 972.199 524.954C996.012 530.611 1007.42 534.118 1034 549C1077.5 573.359 1082.5 594.5 1140 629C1206 670 1328.5 662.5 1440 662.5"
