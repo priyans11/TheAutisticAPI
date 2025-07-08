@@ -3,11 +3,14 @@
 import React, { useState } from 'react';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
+// import Navbar from '@/components/Navbar';
 
 const AboutTab = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
   return (
+    <>
+    {/* <Navbar/> */}
     <div className="min-h-screen bg-black text-white">
       {/* Enhanced Hero Section */}
       <div className="container mx-auto px-6 py-24">
@@ -433,6 +436,7 @@ const AboutTab = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

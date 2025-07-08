@@ -28,12 +28,11 @@ app.use("/api/auth", authRouter);
 //     res.status(200).send("Register Page");      
 // });
 
-const PORT =5000;
-
+const PORT= process.env.PORT 
 
 connectDb()
     .then(() => {
         app.listen(PORT, () => {
-            console.log(`Server is running on port ${process.env.PORT}`);
+            console.log(`Server is running on port ${PORT}`);
         });
      });

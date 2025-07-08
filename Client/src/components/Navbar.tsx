@@ -32,9 +32,9 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavLink href="#home">Home</NavLink>
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#services">Services</NavLink>
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/services">Services</NavLink>
             <NavLink href="#docs">Docs</NavLink>
             <NavLink href="#contact">Contact</NavLink>
           </div>
@@ -71,7 +71,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}>
           <div className="px-2 pt-2 pb-3 space-y-1 bg-black/30 backdrop-blur-md rounded-lg mt-2 border border-white/10">
-            <MobileNavLink href="#home" onClick={toggleMobileMenu}>Home</MobileNavLink>
+            <MobileNavLink href="/" onClick={toggleMobileMenu}>Home</MobileNavLink>
             <MobileNavLink href="#about" onClick={toggleMobileMenu}>About</MobileNavLink>
             <MobileNavLink href="#services" onClick={toggleMobileMenu}>Services</MobileNavLink>
             <MobileNavLink href="#docs" onClick={toggleMobileMenu}>Docs</MobileNavLink>
