@@ -35,4 +35,18 @@ const signupSchema = z.object({
 
 });
 
-module.exports= signupSchema;
+
+// Add login schema
+const loginSchema = z.object({
+  email: z
+    .string({required_error:"email is required"})
+    .trim()
+    .email({msg :"invalid email"}),
+    
+  password: z
+    .string({ required_error: 'password is required' })
+    .trim()
+    .min(1, { msg: 'Password is required' })
+});
+
+module.exports = { signupSchema, loginSchema };

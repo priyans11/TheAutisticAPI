@@ -26,7 +26,7 @@ const ServicesTab: React.FC = () => {
             <ModelCard
               title="Emotion Detection Model"
               description="Our advanced emotion detection AI model uses computer vision and machine learning to accurately identify and analyze facial expressions and emotional states. This model is specifically designed to support individuals with autism by providing real-time emotional feedback and assistance in social interactions."
-              imageSrc="./emo-detection.png"
+              imageSrc="\assets\emo-detection.png"
               featured={true}
               tags={['Computer Vision', 'Machine Learning', 'Autism Support', 'Real-time']}
               metrics={{
