@@ -5,17 +5,15 @@ const app = express();
 const authRouter = require('./Router/Auth-router');
 
 const connectDb = require('./utils/db.js');
+const emotionRouter = require('./Router/emotion-router');
+
 
 //middleware
-app.use(express.json()); /*: This line of code adds Express middleware that parses
-incoming request bodies with JSON payloads. It's important to place this before
-any routes that need to handle JSON data in the request body. This middleware is
-responsible for parsing JSO data from requests, and it should be applied at the
-beginning of your middleware stack to ensure it's available for all subsequent
-route handlers.*/
-
+app.use(express.json());
 
 app.use("/api/auth", authRouter);
+app.use('/api/emotion', emotionRouter);
+
 
 
 

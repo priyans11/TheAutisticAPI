@@ -2,7 +2,9 @@ import React from 'react'
 
 const Emotion = () => {
   return (
-    <div>Emotion</div>
+    <div>
+      <h1>Emotion</h1>
+    </div>
   )
 }
 

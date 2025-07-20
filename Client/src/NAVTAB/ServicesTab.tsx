@@ -255,7 +255,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
                 {/* CTA Button */}
                 <div className="flex gap-4"  >
                   <PremiumButton primary>
-                    <button onClick={() => window.location.href = '/services/emotions'} className='bg-transparent border-none'>
+                    <button onClick={() => window.location.href = '/services/emotion'} className='bg-transparent border-none'>
                     Use Model
                     </button>
                       
