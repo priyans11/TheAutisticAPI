@@ -7,7 +7,6 @@ const home = async (req, res) => {
     res.status(200).send('Hello World! using router controller') // ✅ Send HTTP response
   } catch (error) {
     res.status(500).json({
-      // ✅ Send HTTP response
       status: 500,
       message: 'Internal Server Error home'
     })
@@ -29,12 +28,10 @@ const register = async (req, res) => {
     // const hashedPassword = await bcrypt.hash(password, saltRound); // ✅ Hash the password
 
     const userCreated = await User.create({
-      // ✅ Create a new user
       username,
       email,
       phone,
       password
-      // password : hashedPassword
     })
 
     res
@@ -46,7 +43,6 @@ const register = async (req, res) => {
       })
   } catch (error) {
     res.status(500).send({
-      // ✅ Send HTTP response
       status: 500,
       message: 'Internal Server Error register'
     })
@@ -54,7 +50,7 @@ const register = async (req, res) => {
 }
 
 
-//user login logic
+//user ka login logic
 
 const login = async (req, res) => 
     {
@@ -92,7 +88,6 @@ const login = async (req, res) =>
 
   catch (error) {
     res.status(500).send({
-      // ✅ Send HTTP response
       status: 500,  
         message: 'Internal Server Error login'
     }

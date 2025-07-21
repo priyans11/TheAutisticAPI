@@ -36,7 +36,6 @@ const signupSchema = z.object({
 });
 
 
-// Add login schema
 const loginSchema = z.object({
   email: z
     .string({required_error:"email is required"})

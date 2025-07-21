@@ -16,7 +16,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
     <header className={cn("fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10", className)}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+
           <div className="flex items-center">
             <div className="relative group">
               <div className="flex items-center gap-2 sm:gap-3">
@@ -30,7 +30,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
             </div>
           </div>
 
-          {/* Navigation Links */}
+
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
@@ -39,7 +39,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
             <NavLink href="#contact">Contact</NavLink>
           </div>
 
-          {/* CTA Button */}
+
           <div className="flex items-center space-x-4">
             <button className="hidden sm:inline-flex relative group font-medium text-white/90 hover:text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm">
               <span className="relative z-10 flex items-center gap-2">
@@ -49,7 +49,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:via-purple-600/10 group-hover:to-cyan-600/10 transition-all duration-300"></div>
             </button>
 
-            {/* Mobile Menu Button */}
+
             <button 
               onClick={toggleMobileMenu}
               className="md:hidden p-2 rounded-md text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300"
@@ -65,7 +65,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+
         <div className={cn(
           "md:hidden transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -92,7 +92,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
   );
 };
 
-// Navigation Link Component
+
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
@@ -115,7 +115,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, className }) => {
   );
 };
 
-// Mobile Navigation Link Component
+
 const MobileNavLink: React.FC<NavLinkProps> = ({ href, children, className, onClick }) => {
   return (
     <a

@@ -6,17 +6,15 @@ const Models: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-black text-white">
-        {/* Space for navbar */}
 
-        {/* Hero Section */}
         <div className="container mx-auto px-6 py-20">
           <div className="text-center mb-20 relative">
-            {/* Background gradient effects */}
+
             <div className="absolute inset-0 -top-10 -bottom-10 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-3xl blur-3xl"></div>
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-r from-cyan-400/10 via-blue-400/10 to-purple-400/10 rounded-full blur-3xl opacity-30"></div>
 
             <div className="relative z-10">
-              {/* Animated status badge */}
+
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-8 backdrop-blur-sm hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
                 <span>Cutting-Edge AI Technology</span>
@@ -26,20 +24,20 @@ const Models: React.FC = () => {
                 ></div>
               </div>
 
-              {/* Enhanced main title */}
+
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight relative group">
                 <span className="bg-gradient-to-r from-white via-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent transition-all duration-500 group-hover:from-cyan-300 group-hover:via-blue-300 group-hover:to-purple-300">
                   Our AI Models
                 </span>
 
-                {/* Subtle glow effect */}
+
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/20 to-purple-400/20 blur-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
 
-                {/* Underline effect */}
+
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-32 transition-all duration-500"></div>
               </h1>
 
-              {/* Enhanced description */}
+
               <div className="max-w-3xl mx-auto mb-10">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light mb-6">
                   Advanced artificial intelligence solutions for autism support
@@ -47,7 +45,7 @@ const Models: React.FC = () => {
                   computer vision technology.
                 </p>
 
-                {/* Additional context */}
+
                 <p className="text-base text-gray-400 max-w-2xl mx-auto">
                   Our models are trained on diverse datasets and continuously
                   improved to provide accurate, real-time assistance for
@@ -55,7 +53,7 @@ const Models: React.FC = () => {
                 </p>
               </div>
               <div className="max-w-7xl mx-auto">
-            {/* Emotion Detection Model - Featured Card */}
+
             <div className="mb-16">
               <ModelCard
                 title="Emotion Detection Model"
@@ -76,7 +74,6 @@ const Models: React.FC = () => {
               />
             </div>
 
-            {/* Additional Models Grid */}
             {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <SimpleModelCard
                 title="Speech Analysis"
@@ -102,7 +99,7 @@ const Models: React.FC = () => {
             </div> */}
           </div>
 
-              {/* Key metrics/features */}
+
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 <MetricCard
                   icon={<AccuracyIcon />}
@@ -124,7 +121,7 @@ const Models: React.FC = () => {
                 />
               </div>
 
-              {/* Call-to-action buttons */}
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25 hover:-translate-y-1 active:translate-y-0">
                   <span className="relative z-10 flex items-center justify-center gap-2">
@@ -170,7 +167,7 @@ const Models: React.FC = () => {
             </div>
           </div>
 
-          {/* Premium Model Cards Grid */}
+
 
           
           
@@ -180,7 +177,8 @@ const Models: React.FC = () => {
   );
 };
 
-// Metric Card Component
+
+
 interface MetricCardProps {
   icon: React.ReactNode;
   value: string;
@@ -218,7 +216,7 @@ const MetricCard: React.FC<MetricCardProps> = ({
   );
 };
 
-// Premium Model Card Component
+
 interface ModelCardProps {
   title: string;
   description: string;
@@ -255,7 +253,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
 
           <div className="relative h-full rounded-2xl bg-black backdrop-blur-sm p-12 transition-all duration-500 border border-white/5">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Image Section */}
+
               <div className="relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 p-4 transition-all duration-500 group-hover:from-gray-900/40 group-hover:to-gray-800/40">
                   <img
@@ -266,7 +264,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-xl"></div>
                 </div>
 
-                {/* Floating Metrics */}
+
                 <div className="absolute -top-4 -right-4 space-y-2">
                   <MetricBadge
                     label="Accuracy"
@@ -286,7 +284,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
                 </div>
               </div>
 
-              {/* Content Section */}
+
               <div className="space-y-8">
                 <div>
                   <h3 className="text-4xl md:text-5xl font-light mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
@@ -297,7 +295,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
                   </p>
                 </div>
 
-                {/* Tags */}
+
                 <div className="flex flex-wrap gap-3">
                   {tags.map((tag, index) => (
                     <GlowSpan
@@ -309,7 +307,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
                   ))}
                 </div>
 
-                {/* CTA Button */}
+
                 <div className="flex gap-4">
                   <PremiumButton primary><button onClick={() => window.location.href = '/services/emotion'} className='bg-transparent border-none'>
                     Use Model
@@ -329,7 +327,7 @@ const ModelCard: React.FC<ModelCardProps> = ({
 
 
 
-// Premium Button Component
+
 interface PremiumButtonProps {
   children: React.ReactNode;
   primary?: boolean;
@@ -363,7 +361,7 @@ const PremiumButton: React.FC<PremiumButtonProps> = ({
   );
 };
 
-// Metric Badge Component
+
 interface MetricBadgeProps {
   label: string;
   value: string;
@@ -390,7 +388,7 @@ const MetricBadge: React.FC<MetricBadgeProps> = ({ label, value, color }) => {
   );
 };
 
-// Glowing Span Component
+
 interface GlowSpanProps {
   children: React.ReactNode;
   className?: string;
@@ -413,7 +411,7 @@ const GlowSpan: React.FC<GlowSpanProps> = ({ children, className }) => {
   );
 };
 
-// Icon Components
+
 const AccuracyIcon = () => (
   <svg
     className="w-5 h-5"

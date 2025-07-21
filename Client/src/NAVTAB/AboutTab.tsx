@@ -10,9 +10,9 @@ const AboutTab = () => {
 
   return (
     <>
-    {/* <Navbar/> */}
+
     <div className="min-h-screen bg-black text-white">
-      {/* Enhanced Hero Section */}
+
       <div className="container mx-auto px-6 py-24">
         <div className="text-center mb-24">
           <div className="flex items-center justify-center gap-4 mb-8">
@@ -26,7 +26,7 @@ const AboutTab = () => {
             Revolutionizing artificial intelligence accessibility through unified platform innovation
           </p>
           
-          {/* Enhanced Stats Section */}
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <StatCard label="Active Developers" value="1M+" color="text-blue-400" />
             <StatCard label="AI Models" value="500+" color="text-green-400" />
@@ -34,7 +34,7 @@ const AboutTab = () => {
             <StatCard label="System Uptime" value="99.99%" color="text-orange-400" />
           </div>
 
-          {/* Navigation Pills */}
+
           <div className="flex justify-center gap-2 mb-12">
             {['overview', 'mission', 'technology', 'community'].map((tab) => (
               <button
@@ -53,10 +53,10 @@ const AboutTab = () => {
           </div>
         </div>
 
-        {/* Enhanced Bento Grid Layout */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
           
-          {/* Company Story - Large */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-4 lg:row-span-2"
             icon={
@@ -118,7 +118,7 @@ const AboutTab = () => {
             glowColor="white"
           />
 
-          {/* Technical Excellence - Tall */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-2 lg:row-span-2"
             icon={
@@ -165,7 +165,7 @@ const AboutTab = () => {
             glowColor="white"
           />
 
-          {/* AI Model Ecosystem */}
+
           <BentoCard
             className="md:col-span-2 lg:col-span-3"
             icon={
@@ -211,7 +211,7 @@ const AboutTab = () => {
             glowColor="white"
           />
 
-          {/* Developer Experience */}
+
           <BentoCard
             className="md:col-span-2 lg:col-span-3"
             icon={
@@ -257,7 +257,7 @@ const AboutTab = () => {
             glowColor="white"
           />
 
-          {/* Global Community */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-4"
             icon={
@@ -322,7 +322,7 @@ const AboutTab = () => {
             glowColor="white"
           />
 
-          {/* Enterprise Solutions */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-2"
             icon={
@@ -368,7 +368,7 @@ const AboutTab = () => {
             glowColor="white"
           />
 
-          {/* Vision & Mission Statement - Full Width */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-6"
             icon={
@@ -440,7 +440,7 @@ const AboutTab = () => {
   );
 };
 
-// Enhanced Stat Card Component
+
 interface StatCardProps {
   label: string;
   value: string;
@@ -456,7 +456,7 @@ const StatCard: React.FC<StatCardProps> = ({ label, value, color }) => {
   );
 };
 
-// Timeline Item Component
+
 interface TimelineItemProps {
   year: string;
   title: string;
@@ -473,7 +473,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ year, title, description })
   );
 };
 
-// Enhanced Bento Card Component
+
 interface BentoCardProps {
   className?: string;
   icon: React.ReactNode;
@@ -537,7 +537,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
   );
 };
 
-// Enhanced Glowing Span Component
+
 interface GlowSpanProps {
   children: React.ReactNode;
   className?: string;
@@ -555,7 +555,7 @@ const GlowSpan: React.FC<GlowSpanProps> = ({ children, className }) => {
   );
 };
 
-// Enhanced Feature Card Component
+
 interface FeatureCardProps {
   title: string;
   description: string;

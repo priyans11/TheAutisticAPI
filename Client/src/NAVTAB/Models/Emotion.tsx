@@ -27,18 +27,18 @@ const Emotion: React.FC = () => {
     const baseURL = import.meta.env.VITE_API_BASE_URL;
 console.log("🌐 meow VITE_API_BASE_URL:", baseURL);
 
-    // Health check on mount
-  useEffect(() => {
+
+useEffect(() => {
     fetch(`${baseURL}/`)
       .then(res => {
         if (res.ok) {
-          console.log("✅ Connected to backend:", baseURL);
+          console.log(" Connected to backend:", baseURL);
         } else {
-          console.warn("⚠️ Backend responded with error status:", res.status);
+          console.warn(" Backend responded with error status:", res.status);
         }
       })
       .catch(err => {
-        console.error("❌ Could not connect to backend:", err);
+        console.error("Could not connect to backend:", err);
       });
   }, [baseURL]);
 

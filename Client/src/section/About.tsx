@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 const About = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
+
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-20">
           <h1 className="text-6xl md:text-7xl font-light mb-6 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent leading-tight">
@@ -18,10 +18,10 @@ const About = () => {
           </p>
         </div>
 
-        {/* Bento Grid Layout */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
           
-          {/* Main Purpose - Large Box */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-4 lg:row-span-2"
             icon={
@@ -47,7 +47,7 @@ const About = () => {
             glowColor="white"
           />
 
-          {/* For Developers - Tall Box */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-2 lg:row-span-2"
             icon={
@@ -82,7 +82,7 @@ const About = () => {
             glowColor="white"
           />
 
-          {/* For AI Creators - Medium Box */}
+
           <BentoCard
             className="md:col-span-2 lg:col-span-2"
             icon={
@@ -105,7 +105,7 @@ const About = () => {
             glowColor="white"
           />
 
-          {/* For Enterprises - Medium Box */}
+
           <BentoCard
             className="md:col-span-2 lg:col-span-2"
             icon={
@@ -128,7 +128,7 @@ const About = () => {
             glowColor="white"
           />
 
-          {/* API Testing - Medium Box */}
+
           <BentoCard
             className="md:col-span-2 lg:col-span-2"
             icon={
@@ -151,7 +151,7 @@ const About = () => {
             glowColor="white"
           />
 
-          {/* Model Discovery - Wide Box */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-3"
             icon={
@@ -182,8 +182,8 @@ const About = () => {
             glowColor="white"
           />
 
-          {/* Innovation Ecosystem - Wide Box */}
-          {/* Innovation Ecosystem - Wide Box */}
+          
+          
 <BentoCard
   className="md:col-span-3 lg:col-span-3"
   icon={
@@ -210,7 +210,7 @@ const About = () => {
   }
   glowColor="white"
 />
-          {/* Vision Statement - Full Width */}
+
           <BentoCard
             className="md:col-span-3 lg:col-span-6"
             icon={
@@ -236,7 +236,7 @@ const About = () => {
   );
 };
 
-// Bento Card Component with Hover Animation
+
 interface BentoCardProps {
   className?: string;
   icon: React.ReactNode;
@@ -300,7 +300,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
   );
 };
 
-// Glowing Span Component
+
 interface GlowSpanProps {
   children: React.ReactNode;
   className?: string;
@@ -318,7 +318,7 @@ const GlowSpan: React.FC<GlowSpanProps> = ({ children, className }) => {
   );
 };
 
-// Feature Card Component with Hover Effect
+
 interface FeatureCardProps {
   title: string;
   description: string;

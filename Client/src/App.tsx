@@ -10,9 +10,7 @@ import AboutTab from './NAVTAB/AboutTab';
 import ServicesTab from './NAVTAB/ServicesTab';
 import Emotion from './NAVTAB/Models/Emotion';
 import Models from './section/Models';
-// import SigninForm from './NAVTAB/Auth/SigninForm';
 
-// Create a Home component that includes the Navbar
 const Home = () => {
   return (
     <>
