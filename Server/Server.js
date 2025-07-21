@@ -5,7 +5,7 @@ const app = express();
 const authRouter = require('./Router/Auth-router');
 
 const connectDb = require('./utils/db.js');
-const emotionRouter = require('./Router/emotion-router');
+const emotionRouter = require('./Router/emotion-router.js');
 
 
 //middleware
