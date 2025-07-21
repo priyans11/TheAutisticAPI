@@ -11,7 +11,7 @@ const emotionRouter = require('./Router/emotion-router.js');
 const corsOptions = {
   origin: [
     'http://localhost:5173', // Your local frontend
-    'https://your-deployed-frontend.vercel.app' // Your deployed frontend URL
+    'https://theautisticapi.vercel.app' // Your deployed frontend URL
   ],
   methods: 'GET,POST,PUT,DELETE,PATCH,HEAD',
   credentials: true,
