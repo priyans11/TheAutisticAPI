@@ -1,6 +1,6 @@
 require('dotenv').config(); 
 const express = require('express');
-
+const cors = require('cors');
 const app = express();
 const authRouter = require('./Router/Auth-router');
 
@@ -8,7 +8,20 @@ const connectDb = require('./utils/db.js');
 const emotionRouter = require('./Router/emotion-router.js');
 
 
+const corsOptions = {
+  origin: [
+    'http://localhost:5173', // Your local frontend
+    'https://your-deployed-frontend.vercel.app' // Your deployed frontend URL
+  ],
+  methods: 'GET,POST,PUT,DELETE,PATCH,HEAD',
+  credentials: true,
+};
+
+
 //middleware
+app.use(cors(corsOptions));
+
+
 app.use(express.json());
 
 app.use("/api/auth", authRouter);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import axios from 'axios';
 import { cn } from '../../lib/utils';
 import { GlowingEffect } from '../../components/ui/glowing-effect';
@@ -24,6 +24,24 @@ const Emotion: React.FC = () => {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+    const baseURL = import.meta.env.VITE_API_BASE_URL;
+console.log("🌐 meow VITE_API_BASE_URL:", baseURL);
+
+    // Health check on mount
+  useEffect(() => {
+    fetch(`${baseURL}/`)
+      .then(res => {
+        if (res.ok) {
+          console.log("✅ Connected to backend:", baseURL);
+        } else {
+          console.warn("⚠️ Backend responded with error status:", res.status);
+        }
+      })
+      .catch(err => {
+        console.error("❌ Could not connect to backend:", err);
+      });
+  }, [baseURL]);
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -32,6 +50,9 @@ const Emotion: React.FC = () => {
       setError(null);
     }
   };
+
+
+
 
   const analyzeVideo = async () => {
     if (!selectedFile) return;
@@ -45,13 +66,13 @@ const Emotion: React.FC = () => {
       formData.append('video', selectedFile);
 
       const response = await axios.post<AnalysisResult>(
-        '/api/emotion/analyze-video',
-        formData,
-        {
-          headers: { 'Content-Type': 'multipart/form-data' },
-          timeout: 300000,
-        }
-      );
+  `${baseURL}/api/emotion/analyze-video`,
+  formData,
+  {
+    headers: { 'Content-Type': 'multipart/form-data' },
+    timeout: 300000,
+  }
+);
 
       setResult(response.data);
     } catch (err: any) {
@@ -176,6 +197,7 @@ const Emotion: React.FC = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Emotion;
