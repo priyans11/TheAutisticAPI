@@ -26,6 +26,11 @@ app.use('/api/emotion', emotionRouter);
 //     res.status(200).send("Register Page");      
 // });
 
+app.get("/", (req, res) => {
+    console.log("hi backend running");
+    res.status(200).send("hi backend running");
+});
+
 const PORT= process.env.PORT 
 
 connectDb()
