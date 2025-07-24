@@ -18,11 +18,18 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           <div className="flex items-center">
+
+             <img 
+    src="/pngwing.com.png" // Update with your logo path
+    alt="Logo"
+    className="h-15 w-22 mr-2 filter brightness-1700" // Adjust size and margin as needed
+  />
+
             <div className="relative group">
               <div className="flex items-center gap-2 sm:gap-3">
                 <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-cyan-400/80 rounded-full animate-pulse"></span>
                 <span className="text-lg sm:text-xl md:text-2xl font-medium text-white/90 tracking-wide">
-                  TheAutisticApi
+                  PU API
                 </span>
                 <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-cyan-400/80 rounded-full animate-pulse"></span>
               </div>

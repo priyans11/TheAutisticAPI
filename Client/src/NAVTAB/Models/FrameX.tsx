@@ -18,7 +18,7 @@ interface AnalysisResult {
   };
 }
 
-const Emotion: React.FC = () => {
+const FrameX: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<AnalysisResult | null>(null);
@@ -88,7 +88,7 @@ useEffect(() => {
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-light mb-6 bg-gradient-to-r from-white via-purple-300 to-pink-300 bg-clip-text text-transparent leading-tight">
-            Emotion Detection
+            Frame Extraxtion
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-light mb-8">
             Upload a video to extract frames and view metadata.
@@ -121,7 +121,7 @@ useEffect(() => {
                     onClick={analyzeVideo}
                     disabled={!selectedFile || isLoading}
                     className={cn(
-                      "px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300",
+                      "px-8 py-4 rounded-lg mt-8 font-medium text-lg transition-all duration-300",
                       selectedFile && !isLoading
                         ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:scale-105"
                         : "bg-gray-700 text-gray-400 cursor-not-allowed"
@@ -200,4 +200,4 @@ useEffect(() => {
   
 };
 
-export default Emotion;
+export default FrameX;

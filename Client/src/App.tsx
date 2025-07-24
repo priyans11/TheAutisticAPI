@@ -8,8 +8,10 @@ import Demo from "./section/Demo";
 import { Navbar } from "./components/Navbar";
 import AboutTab from './NAVTAB/AboutTab';
 import ServicesTab from './NAVTAB/ServicesTab';
-import Emotion from './NAVTAB/Models/Emotion';
+// import Emotion from './NAVTAB/Models/Emotion';
 import Models from './section/Models';
+import FrameX from './NAVTAB/Models/FrameX';
+import { ThemeToggle } from './components/Theme-Toggle';
 
 const Home = () => {
   return (
@@ -17,6 +19,7 @@ const Home = () => {
       <Demo/>
       <About/>
       <Models/>
+
     </>
   );
 };
@@ -24,12 +27,14 @@ const Home = () => {
 const App = () => {
   return (
     <Router>
-<Navbar />
+      <Navbar />
+      {/* <ThemeToggle /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutTab />} />
         <Route path="/services" element={<ServicesTab />} />
-        <Route path="/services/emotion" element={<Emotion/>} />
+        <Route path="/services/frame-x" element={<FrameX />} />
         {/* <Route path="/signin" element={<SigninForm />} /> */}
 
 
@@ -39,6 +44,7 @@ const App = () => {
         {/* <Route path="/signup" element={<SignupFormDemo />} /> */}
       </Routes>
     </Router>
+    
   );
 };
 

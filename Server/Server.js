@@ -10,8 +10,8 @@ const emotionRouter = require('./Router/emotion-router.js');
 
 const corsOptions = {
   origin: [
-    'http://localhost:5173',
-    'https://theautisticapi.vercel.app'
+    'http://localhost:5173', // Your local frontend
+    'https://theautisticapi.vercel.app' // Your deployed frontend URL
   ],
   methods: 'GET,POST,PUT,DELETE,PATCH,HEAD',
   credentials: true,
@@ -40,7 +40,7 @@ app.use('/api/emotion', emotionRouter);
 // });
 
 app.get("/", (req, res) => {
-    console.log("hi backend running");
+    // console.log("hi backend running");
     res.status(200).send("hi backend running");
 });
 
@@ -49,6 +49,6 @@ const PORT= process.env.PORT
 connectDb()
     .then(() => {
         app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
+            // console.log(`Server is running on port ${PORT}`);
         });
      });
