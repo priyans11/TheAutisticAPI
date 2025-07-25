@@ -11,7 +11,6 @@ import ServicesTab from './NAVTAB/ServicesTab';
 // import Emotion from './NAVTAB/Models/Emotion';
 import Models from './section/Models';
 import FrameX from './NAVTAB/Models/FrameX';
-import { ThemeToggle } from './components/Theme-Toggle';
 
 const Home = () => {
   return (
@@ -28,7 +27,6 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      {/* <ThemeToggle /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
