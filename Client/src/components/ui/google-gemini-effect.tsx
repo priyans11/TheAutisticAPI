@@ -24,18 +24,18 @@ export const GoogleGeminiEffect = ({
       <img
   src="/pucolor.png"
   alt="Banner"
-  className="w-full max-w-[140px] mx-auto mb-6  rounded-full  shadow-lg mix-blend-multiply"
+  className="w-full max-w-[140px] mx-auto mb-6  rounded-full  shadow-lg "
 />
 
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
-        {title || `Bridging AI Innovation`}
+        {title || ` Bridging AI Innovation`}
       </p>
       <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description ||
           `Your Gateway to AI Innovation - Connecting brilliant minds with powerful AI models through one unified platform`}
       </p>
-         <div className=" w-full h-[890px] -top-40 md:-top-32 flex items-center justify-center absolute">
-        <button className="relative group  font-medium text-white/90 hover:text-white px-3 py-1.5 xs:px-4 xs:py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 rounded-full text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl z-30 mt-34 sm:mt-38 md:mt-42 lg:mt-34 transition-all duration-300 bg-white/0 transform hover:scale-105  border border-white/20 hover:border-white/40 backdrop-blur-3xl max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+           <div className="w-full h-[890px] -top-40 md:-top-32 flex items-center justify-center absolute">
+        <button className="relative group font-medium text-white/90 hover:text-white px-3 py-1.5 xs:px-4 xs:py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 rounded-full text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl z-30 mt-34 sm:mt-38 md:mt-42 lg:mt-32 transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
           <span className="relative z-10 flex items-center gap-1 xs:gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3">
             <span className="w-1 h-1 xs:w-1.5 xs:h-1.5 sm:w-2 sm:h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 bg-cyan-400/80 rounded-full animate-pulse"></span>
             <span className="tracking-wide whitespace-nowrap">PU API</span>

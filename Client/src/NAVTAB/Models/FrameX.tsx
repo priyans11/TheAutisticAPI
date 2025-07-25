@@ -5,7 +5,8 @@ import { GlowingEffect } from '../../components/ui/glowing-effect';
 
 interface Frame {
   filename: string;
-  data: string; // base64 image
+  data: string; //BASE 64 me jo image data rhta h string me rhta
+  
 }
 
 interface AnalysisResult {
@@ -143,7 +144,7 @@ useEffect(() => {
           {result && (
             <div className="space-y-6">
               <div className="border border-white/10 rounded-xl p-1">
-                <GlowingEffect spread={40} glow={true} disabled={false} proximity={70} inactiveZone={0.01} borderWidth={1.5} />
+                {/* <GlowingEffect spread={40} glow={true} disabled={false} proximity={70} inactiveZone={0.01} borderWidth={1.5} /> */}
                 <div className="relative rounded-lg bg-black/50 backdrop-blur-sm p-6">
                   <h3 className="text-xl font-medium text-green-300 mb-4 flex items-center gap-2">
                     {result.message}
@@ -168,7 +169,7 @@ useEffect(() => {
               </div>
               {result.frames && result.frames.length > 0 && (
                 <div className="border border-white/10 rounded-xl p-1">
-                  <GlowingEffect spread={40} glow={true} disabled={false} proximity={70} inactiveZone={0.01} borderWidth={1.5} />
+                  {/* <GlowingEffect spread={40} glow={true} disabled={false} proximity={70} inactiveZone={0.01} borderWidth={1.5} /> */}
                   <div className="relative rounded-lg bg-black/50 backdrop-blur-sm p-6">
                     <h3 className="text-xl font-medium text-blue-300 mb-6">Extracted Frames</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
