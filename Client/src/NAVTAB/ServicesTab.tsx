@@ -261,13 +261,13 @@ const MetricCard: React.FC<MetricCardProps> = ({ icon, value, label, color }) =>
 };
 
 // Simple Model Card Component
-interface SimpleModelCardProps {
-  title: string;
-  description: string;
-  accuracy: string;
-  status: 'Active' | 'Beta' | 'Coming Soon';
-  icon: React.ReactNode;
-}
+// interface SimpleModelCardProps {
+//   title: string;
+//   description: string;
+//   accuracy: string;
+//   status: 'Active' | 'Beta' | 'Coming Soon';
+//   icon: React.ReactNode;
+// }
 
 // const SimpleModelCard: React.FC<SimpleModelCardProps> = ({ 
 //   title, 
