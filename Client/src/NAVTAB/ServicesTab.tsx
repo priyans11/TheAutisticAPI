@@ -269,56 +269,56 @@ interface SimpleModelCardProps {
   icon: React.ReactNode;
 }
 
-const SimpleModelCard: React.FC<SimpleModelCardProps> = ({ 
-  title, 
-  description, 
-  accuracy, 
-  status, 
-  icon 
-}) => {
-  const statusColors = {
-    'Active': 'bg-green-500/20 text-green-300 border-green-400/30',
-    'Beta': 'bg-yellow-500/20 text-yellow-300 border-yellow-400/30',
-    'Coming Soon': 'bg-gray-500/20 text-gray-300 border-gray-400/30'
-  };
+// const SimpleModelCard: React.FC<SimpleModelCardProps> = ({ 
+//   title, 
+//   description, 
+//   accuracy, 
+//   status, 
+//   icon 
+// }) => {
+//   const statusColors = {
+//     'Active': 'bg-green-500/20 text-green-300 border-green-400/30',
+//     'Beta': 'bg-yellow-500/20 text-yellow-300 border-yellow-400/30',
+//     'Coming Soon': 'bg-gray-500/20 text-gray-300 border-gray-400/30'
+//   };
 
-  return (
-    <div className="group relative">
-      <div className="relative rounded-2xl border border-white/10 p-1 transition-all duration-300 hover:border-white/20 group-hover:scale-[1.02]">
-        <div className="relative h-full rounded-xl bg-black/50 backdrop-blur-sm p-6 transition-all duration-300 border border-white/5 group-hover:bg-black/60">
-          <div className="flex items-start justify-between mb-4">
-            <div className="text-2xl text-cyan-400">
-              {icon}
-            </div>
-            <div className={cn("px-2 py-1 rounded-full text-xs font-medium border", statusColors[status])}>
-              {status}
-            </div>
-          </div>
+//   return (
+//     <div className="group relative">
+//       <div className="relative rounded-2xl border border-white/10 p-1 transition-all duration-300 hover:border-white/20 group-hover:scale-[1.02]">
+//         <div className="relative h-full rounded-xl bg-black/50 backdrop-blur-sm p-6 transition-all duration-300 border border-white/5 group-hover:bg-black/60">
+//           <div className="flex items-start justify-between mb-4">
+//             <div className="text-2xl text-cyan-400">
+//               {icon}
+//             </div>
+//             <div className={cn("px-2 py-1 rounded-full text-xs font-medium border", statusColors[status])}>
+//               {status}
+//             </div>
+//           </div>
           
-          <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-200 transition-colors">
-            {title}
-          </h3>
+//           <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-200 transition-colors">
+//             {title}
+//           </h3>
           
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-            {description}
-          </p>
+//           <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+//             {description}
+//           </p>
           
-          <div className="flex items-center justify-between">
-            <div className="text-sm">
-              <span className="text-gray-400">Accuracy: </span>
-              <span className="text-cyan-300 font-medium">{accuracy}</span>
-            </div>
-            <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+//           <div className="flex items-center justify-between">
+//             <div className="text-sm">
+//               <span className="text-gray-400">Accuracy: </span>
+//               <span className="text-cyan-300 font-medium">{accuracy}</span>
+//             </div>
+//             <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
+//               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+//               </svg>
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 // Premium Button Component
 interface PremiumButtonProps {
@@ -412,22 +412,22 @@ const ModelsIcon = () => (
   </svg>
 );
 
-const SpeechIcon = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-  </svg>
-);
+// const SpeechIcon = () => (
+//   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+//   </svg>
+// );
 
-const BehaviorIcon = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-  </svg>
-);
+// const BehaviorIcon = () => (
+//   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+//   </svg>
+// );
 
-const SocialIcon = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-  </svg>
-);
+// const SocialIcon = () => (
+//   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+//   </svg>
+// );
 
 export default Services;
