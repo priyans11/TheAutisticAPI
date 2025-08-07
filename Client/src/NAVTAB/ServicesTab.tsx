@@ -171,9 +171,21 @@ const Services: React.FC = () => {
             {/* Using the new reusable component */}
             <div className="space-y-16">
               <FeaturedModelCard
+  title="Frame Extractor Model"
+  description="The Frame Extractor Model processes uploaded videos to efficiently extract individual frames and provide an accurate frame count. This tool is ideal for video analysis, enabling users to retrieve specific frames for further processing or research in computer vision and machine learning applications."
+  imageSrc="/frame-xtractor.png"
+  tags={['Frame Extraction', 'Video Analysis', 'Computer Vision', 'Frame Count']}
+  metrics={{
+    accuracy: '--%',
+    latency: '--ms',
+    models: '--',
+  }}
+                modelPageUrl="/services/frame-x"
+              />
+              <FeaturedModelCard
                 title="Emotion Detection Model"
                 description="Our advanced emotion detection AI model uses computer vision and machine learning to accurately identify and analyze facial expressions and emotional states. This model is specifically designed to support individuals with autism by providing real-time emotional feedback and assistance in social interactions."
-                imageSrc="/assets/emo-detection.png"
+                imageSrc="/emotion-detection.png"
                 tags={['Computer Vision', 'Machine Learning', 'Autism Support', 'Real-time']}
                 metrics={{
                   accuracy: '--%',
@@ -184,18 +196,7 @@ const Services: React.FC = () => {
               />
 
               {/* Example: Add another featured model easily */}
-              <FeaturedModelCard
-  title="Frame Extractor Model"
-  description="The Frame Extractor Model processes uploaded videos to efficiently extract individual frames and provide an accurate frame count. This tool is ideal for video analysis, enabling users to retrieve specific frames for further processing or research in computer vision and machine learning applications."
-  imageSrc="/assets/gaze-tracking.png"
-  tags={['Frame Extraction', 'Video Analysis', 'Computer Vision', 'Frame Count']}
-  metrics={{
-    accuracy: '--%',
-    latency: '--ms',
-    models: '--',
-  }}
-                modelPageUrl="/services/frame-x"
-              />
+              
             </div>
 
             {/* ... (Your existing grid of SimpleModelCard components remains unchanged) ... */}

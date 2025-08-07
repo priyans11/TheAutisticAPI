@@ -20,9 +20,9 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
           <div className="flex items-center">
 
              <img 
-    src="/pngwing.com.png" // Update with your logo path
+    src="/pu.png" // Update with your logo path
     alt="Logo"
-    className="h-15 w-22 mr-2 filter brightness-1700" // Adjust size and margin as needed
+    className="h-12 w-12 mr-2 " // Adjust size and margin as needed
   />
 
             <div className="relative group">
