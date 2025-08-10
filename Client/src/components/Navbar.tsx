@@ -7,6 +7,8 @@ interface HeaderProps {
   className?: string;
 }
 
+
+
 export const Navbar: React.FC<HeaderProps> = ({ className }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
