@@ -1,7 +1,8 @@
 # AISOC 2025: TheAutisticAPI
 
 ## Team Information
-  **Team Name:** TheAutisticAPI
+
+**Team Name: _TheAutisticAPI_**
 
  |**Team Members** |**E-mail** |
  |:---:|:--:|
