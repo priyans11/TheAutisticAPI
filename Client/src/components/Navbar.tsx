@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useClerk , UserButton  ,useUser} from '@clerk/clerk-react'   
+import {Link, useNavigate } from 'react-router-dom'
 
 interface HeaderProps {
   className?: string;
@@ -7,11 +9,16 @@ interface HeaderProps {
 
 export const Navbar: React.FC<HeaderProps> = ({ className }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
+    
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
 
+    
+  };
+const navigate= useNavigate()
+    const {user} =useUser()
+    const {openSignIn}=useClerk()
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10", className)}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,13 +55,17 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
 
 
           <div className="flex items-center space-x-4">
-            <button className="hidden sm:inline-flex relative group font-medium text-white/90 hover:text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm">
-              <span className="relative z-10 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-cyan-400/80 rounded-full animate-pulse"></span>
-                <span className="tracking-wide">Get Started</span>
-              </span>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:via-purple-600/10 group-hover:to-cyan-600/10 transition-all duration-300"></div>
-            </button>
+            {!user ? (
+              <button className="hidden sm:inline-flex relative group font-medium text-white/90 hover:text-white px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm" onClick={() => openSignIn()}>
+                <span className="relative z-10 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-cyan-400/80 rounded-full animate-pulse"></span>
+                  <span className="tracking-wide">Get Started</span>
+                </span>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:via-purple-600/10 group-hover:to-cyan-600/10 transition-all duration-300"></div>
+              </button>
+            ) : (
+              <UserButton afterSignOutUrl="/" />
+            )}
 
 
             <button 
@@ -84,13 +95,19 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
             <MobileNavLink href="#docs" onClick={toggleMobileMenu}>Docs</MobileNavLink>
             <MobileNavLink href="#contact" onClick={toggleMobileMenu}>Contact</MobileNavLink>
             <div className="pt-4">
-              <button className="w-full relative group font-medium text-white/90 hover:text-white px-4 py-2 rounded-full text-sm transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm">
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-cyan-400/80 rounded-full animate-pulse"></span>
-                  <span className="tracking-wide">Get Started</span>
-                </span>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:via-purple-600/10 group-hover:to-cyan-600/10 transition-all duration-300"></div>
-              </button>
+              {!user ? (
+                <button className="w-full relative group font-medium text-white/90 hover:text-white px-4 py-2 rounded-full text-sm transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm" onClick={() => openSignIn()}>
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-cyan-400/80 rounded-full animate-pulse"></span>
+                    <span className="tracking-wide">Get Started</span>
+                  </span>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-cyan-600/5 group-hover:from-blue-600/10 group-hover:via-purple-600/10 group-hover:to-cyan-600/10 transition-all duration-300"></div>
+                </button>
+              ) : (
+                <div className="flex justify-center">
+                  <UserButton afterSignOutUrl="/" />
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -109,8 +126,8 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ href, children, className }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={cn(
         "text-white/70 hover:text-white text-sm md:text-base font-medium transition-all duration-300 relative group",
         className
@@ -118,15 +135,15 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, className }) => {
     >
       {children}
       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
-    </a>
+    </Link>
   );
 };
 
 
 const MobileNavLink: React.FC<NavLinkProps> = ({ href, children, className, onClick }) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       onClick={onClick}
       className={cn(
         "block px-3 py-2 text-white/70 hover:text-white text-base font-medium transition-all duration-300 hover:bg-white/10 rounded-md",
@@ -134,7 +151,7 @@ const MobileNavLink: React.FC<NavLinkProps> = ({ href, children, className, onCl
       )}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
