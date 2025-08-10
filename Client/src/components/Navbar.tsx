@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useClerk , UserButton  ,useUser} from '@clerk/clerk-react'   
-import {Link, useNavigate } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 interface HeaderProps {
   className?: string;
