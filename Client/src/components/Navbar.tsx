@@ -16,7 +16,7 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
 
     
   };
-const navigate= useNavigate()
+// const navigate= useNavigate()
     const {user} =useUser()
     const {openSignIn}=useClerk()
   return (
