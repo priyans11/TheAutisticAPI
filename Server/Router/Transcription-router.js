@@ -33,6 +33,7 @@ router.post('/transcribe', upload.single('audio'), async (req, res) => {
       return res.status(500).json({ message: 'Appwrite configuration missing on server.' });
     }
 
+    
     console.log('Uploading to Appwrite...', { endpoint: APPWRITE_ENDPOINT, bucket: APPWRITE_BUCKET_ID });
     const uploadUrl = `${APPWRITE_ENDPOINT.replace(/\/$/, '')}/v1/storage/buckets/${APPWRITE_BUCKET_ID}/files`;
 
