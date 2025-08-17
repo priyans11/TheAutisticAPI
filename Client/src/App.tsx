@@ -11,6 +11,8 @@ import ServicesTab from './NAVTAB/ServicesTab';
 // import Emotion from './NAVTAB/Models/Emotion';
 import Models from './section/Models';
 import FrameX from './NAVTAB/Models/FrameX';
+import { RedirectToSignIn, SignedIn, SignedOut } from '@clerk/clerk-react';
+import Transcription from './NAVTAB/Models/Transcription';
 
 const Home = () => {
   return (
@@ -31,8 +33,40 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutTab />} />
-        <Route path="/services" element={<ServicesTab />} />
-        <Route path="/services/frame-x" element={<FrameX />} />
+        <Route path="/services" element={
+        <>
+        <SignedIn>
+          <ServicesTab />
+         </SignedIn>
+
+         <SignedOut>
+          <RedirectToSignIn/>
+         </SignedOut>
+        </>
+
+          } />
+        <Route path="/services/frame-x" element={
+          <>
+          <SignedIn>
+          <FrameX />
+         </SignedIn>
+
+         <SignedOut>
+          <RedirectToSignIn/>
+         </SignedOut>
+         </>
+        } />
+        <Route path="/services/asr" element={
+          <>
+          <SignedIn>
+          <Transcription/>
+         </SignedIn>
+
+         <SignedOut>
+          <RedirectToSignIn/>
+         </SignedOut>
+         </>
+        } />
         {/* <Route path="/signin" element={<SigninForm />} /> */}
 
 

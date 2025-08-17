@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 
 const emotionRouter = require('./Router/emotion-router.js');
+const asrRouter = require('./Router/Transcription-router.js');
 
 
 const corsOptions = {
@@ -25,7 +26,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use('/api/emotion', emotionRouter);
-
+app.use('/api/asr', asrRouter);
 
 
 
