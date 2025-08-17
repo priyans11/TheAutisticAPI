@@ -38,8 +38,8 @@ const Transcription: React.FC = () => {
       });
 
       const data = resp.data || {};
-      const text = data.transcript || data.text || data.result || JSON.stringify(data);
-      setTranscript(typeof text === 'string' ? text : JSON.stringify(text));
+      const text = data.transcript || data.text || data.result || (typeof data === 'string' ? data : JSON.stringify(data));
+      setTranscript(typeof text === 'string' ? text : JSON.stringify(text, null, 2));
     } catch (err: any) {
       setError(err.response?.data?.message || 'Transcription failed. Try again.');
       console.error(err);
@@ -65,29 +65,16 @@ const Transcription: React.FC = () => {
               <div className="text-center">
                 <label className="cursor-pointer relative block">
                   <div className="border-2 border-dashed border-white/20 rounded-lg p-6">
-                    <p className="text-lg text-gray-300 mb-2">
-                      {selectedFile ? selectedFile.name : 'Click to choose audio or drop here'}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {selectedFile ? `${(selectedFile.size / (1024 * 1024)).toFixed(2)} MB • ${selectedFile.type}` : 'wav, flac, mp3, m4a, ogg'}
-                    </p>
+                    <p className="text-lg text-gray-300 mb-2">{selectedFile ? selectedFile.name : 'Click to choose audio or drop here'}</p>
+                    <p className="text-sm text-gray-500">{selectedFile ? `${(selectedFile.size / (1024 * 1024)).toFixed(2)} MB • ${selectedFile.type}` : 'wav, flac, mp3, m4a, ogg'}</p>
                   </div>
-                  {/* make the input cover the label so clicking anywhere opens file picker */}
-                  <input
-                    type="file"
-                    accept="audio/*"
-                    onChange={handleFileSelect}
-                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                  />
+                  <input type="file" accept="audio/*" onChange={handleFileSelect} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
                 </label>
                 <div className="mt-6">
                   <button
                     onClick={submitAudio}
                     disabled={!selectedFile || isLoading}
-                    className={cn(
-                      'px-6 py-3 rounded-lg font-medium',
-                      selectedFile && !isLoading ? 'bg-gradient-to-r from-purple-600 to-pink-600' : 'bg-gray-700 text-gray-400 cursor-not-allowed'
-                    )}
+                    className={cn('px-6 py-3 rounded-lg font-medium', selectedFile && !isLoading ? 'bg-gradient-to-r from-purple-600 to-pink-600' : 'bg-gray-700 text-gray-400 cursor-not-allowed')}
                   >
                     {isLoading ? 'Transcribing...' : 'Transcribe Audio'}
                   </button>
