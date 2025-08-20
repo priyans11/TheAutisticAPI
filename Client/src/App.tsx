@@ -12,7 +12,7 @@ import ServicesTab from './NAVTAB/ServicesTab';
 import Models from './section/Models';
 import FrameX from './NAVTAB/Models/FrameX';
 import { RedirectToSignIn, SignedIn, SignedOut } from '@clerk/clerk-react';
-import Transcription from './NAVTAB/Models/Transcription';
+import Ollama from './NAVTAB/Models/Ollama';
 
 const Home = () => {
   return (
@@ -56,10 +56,11 @@ const App = () => {
          </SignedOut>
          </>
         } />
-        <Route path="/services/asr" element={
+
+        <Route path="/services/vedya" element={
           <>
           <SignedIn>
-          <Transcription/>
+          <Ollama/>
          </SignedIn>
 
          <SignedOut>
@@ -67,7 +68,8 @@ const App = () => {
          </SignedOut>
          </>
         } />
-        {/* <Route path="/signin" element={<SigninForm />} /> */}
+       
+       
 
 
         {/* <Route path="/about" element={<AboutTab />} />
