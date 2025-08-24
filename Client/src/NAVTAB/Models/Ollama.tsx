@@ -510,7 +510,7 @@ const Ollama: React.FC = () => {
             </div>
             <div>
               <h1 className="text-xl font-semibold bg-gradient-to-r from-sky-300 to-sky-400 bg-clip-text text-transparent">Vedya</h1>
-              <p className="text-xs text-gray-400">AI Assistant powered by Ollama</p>
+              <p className="text-xs text-gray-400">Ally of Knowledge</p>
             </div>
           </div>
         </div>

@@ -86,6 +86,7 @@ router.post('/chat', upload.array('files'), async (req, res) => {
           mimetype: file.mimetype
         });
       }
+      
       ollamaRequest.images = fileData.filter(f => f.type === 'image').map(f => f.data);
       ollamaRequest.context = fileData.map(f => `File: ${f.filename} (${f.mimetype})`).join('\n');
     }

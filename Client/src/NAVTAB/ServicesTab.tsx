@@ -198,7 +198,7 @@ const Services: React.FC = () => {
               <FeaturedModelCard
                 title="Vedya AI Assistant"
                 description="Meet Vedya, our intelligent conversational AI assistant powered by advanced language models. Designed to understand and respond to text, images, audio, and video inputs, Vedya provides personalized support and assistance. Perfect for autism support with empathetic responses, multimodal communication, and real-time interaction capabilities."
-                imageSrc="/Gemini_Generated_Image_z4em0xz4em0xz4em-removebg-preview.png"
+                imageSrc="/vedya.png"
                 tags={['Conversational AI', 'Multimodal Input', 'Autism Support', 'Real-time Chat', 'Language Model']}
                 metrics={{
                   accuracy: '--%',
