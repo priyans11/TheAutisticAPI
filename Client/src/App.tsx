@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AboutTab from "./NAVTAB/AboutTab";
 // import ServicesTab from "./NAVTAB/ServicesTab";
 import About from "./section/About";
-import Demo from "./section/Demo";
 import { Navbar } from "./components/Navbar";
 import AboutTab from './NAVTAB/AboutTab';
 import ServicesTab from './NAVTAB/ServicesTab';
