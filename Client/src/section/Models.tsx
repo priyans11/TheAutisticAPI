@@ -26,7 +26,7 @@ const Models: React.FC = () => {
 
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight relative group">
-                <span className="bg-gradient-to-r from-white via-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent transition-all duration-500 group-hover:from-cyan-300 group-hover:via-blue-300 group-hover:to-purple-300">
+                <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent transition-all duration-500 group-hover:from-cyan-300 group-hover:via-blue-300 group-hover:to-purple-300">
                   Our AI Models
                 </span>
 
@@ -58,7 +58,7 @@ const Models: React.FC = () => {
               <ModelCard
                 title="Emotion Detection Model"
                 description="Our advanced emotion detection AI model uses computer vision and machine learning to accurately identify and analyze facial expressions and emotional states. This model is specifically designed to support individuals with autism by providing real-time emotional feedback and assistance in social interactions."
-                imageSrc="/assets/emo-detection.png"
+                imageSrc="/emo-detection.png"
                 featured={true}
                 tags={[
                   "Computer Vision",
@@ -67,8 +67,8 @@ const Models: React.FC = () => {
                   "Real-time",
                 ]}
                 metrics={{
-                  accuracy: "94.2%",
-                  latency: "120ms",
+                  accuracy: "--%",
+                  latency: "--ms",
                   Status: "Active",
                 }}
               />
@@ -103,13 +103,13 @@ const Models: React.FC = () => {
               <div className="flex flex-wrap justify-center gap-6 mb-10">
                 <MetricCard
                   icon={<AccuracyIcon />}
-                  value="89.2%"
+                  value="--%"
                   label="Accuracy Rate"
                   color="green"
                 />
                 <MetricCard
                   icon={<SpeedIcon />}
-                  value="<170ms"
+                  value="--ms"
                   label="Response Time"
                   color="blue"
                 />
@@ -123,11 +123,12 @@ const Models: React.FC = () => {
 
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25 hover:-translate-y-1 active:translate-y-0">
+                <button 
+                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25 hover:-translate-y-1 active:translate-y-0"
+                  onClick={() => window.location.href = '/services'}
+                >
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    <button onClick={() => window.location.href = '/services'} className='bg-transparent border-none'>
                     Explore Our Models
-                    </button>
                     <svg
                       className="w-5 h-5 transition-transform group-hover:translate-x-1"
                       fill="none"
@@ -309,10 +310,10 @@ const ModelCard: React.FC<ModelCardProps> = ({
 
 
                 <div className="flex gap-4">
-                  <PremiumButton primary><button onClick={() => window.location.href = '/services/emotion'} className='bg-transparent border-none'>
+                  <PremiumButton primary onClick={() => window.location.href = '/services/emotion-detection'}>
                     Use Model
-                    </button></PremiumButton>
-                  <PremiumButton>Learn More</PremiumButton>
+                  </PremiumButton>
+                  <PremiumButton onClick={() => window.location.href = '/docs'}>Learn More</PremiumButton>
                 </div>
               </div>
             </div>

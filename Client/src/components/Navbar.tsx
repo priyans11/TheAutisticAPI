@@ -51,8 +51,8 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/services">Services</NavLink>
-            <NavLink href="#docs">Docs</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="/docs">Docs</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
           </div>
 
 
@@ -104,10 +104,10 @@ export const Navbar: React.FC<HeaderProps> = ({ className }) => {
         )}>
           <div className="px-2 pt-2 pb-3 space-y-1 bg-black/30 backdrop-blur-md rounded-lg mt-2 border border-white/10">
             <MobileNavLink href="/" onClick={toggleMobileMenu}>Home</MobileNavLink>
-            <MobileNavLink href="#about" onClick={toggleMobileMenu}>About</MobileNavLink>
-            <MobileNavLink href="#services" onClick={toggleMobileMenu}>Services</MobileNavLink>
-            <MobileNavLink href="#docs" onClick={toggleMobileMenu}>Docs</MobileNavLink>
-            <MobileNavLink href="#contact" onClick={toggleMobileMenu}>Contact</MobileNavLink>
+            <MobileNavLink href="/about" onClick={toggleMobileMenu}>About</MobileNavLink>
+            <MobileNavLink href="/services" onClick={toggleMobileMenu}>Services</MobileNavLink>
+            <MobileNavLink href="/docs" onClick={toggleMobileMenu}>Docs</MobileNavLink>
+            <MobileNavLink href="/contact" onClick={toggleMobileMenu}>Contact</MobileNavLink>
             <div className="pt-4">
               {!user ? (
                 <button className="w-full relative group font-medium text-white/90 hover:text-white px-4 py-2 rounded-full text-sm transition-all duration-300 transform hover:scale-105 border border-white/20 hover:border-white/40 backdrop-blur-sm" onClick={() => openSignIn()}>
