@@ -29,7 +29,7 @@ export const GoogleGeminiEffect = ({
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || ` Bridging AI Innovation`}
       </p>
-      <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
+      <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto pb-8 md:pb-12">
         {description ||
           `Your Gateway to AI Innovation - Connecting brilliant minds with powerful AI models through one unified platform`}
       </p>
